@@ -6,6 +6,7 @@ const Search = () => {
 
     const [output, setOutput] = useState([]);
     const [input, setInput] = useState('');
+    const [result, setResult] = useState(false);
 
     const handleInput = (event) => {
 
@@ -26,6 +27,7 @@ const Search = () => {
 
 
         setOutput(data.results.slice(0, 18));
+        setResult(true);
 
     }
 
@@ -45,15 +47,16 @@ const Search = () => {
 
                     <input placeholder='Search Movie' type='text' name='searchBar' className='bg-gray-200 h-12 rounded-l-full flex justify-center w-3/5  p-3 text-md' onChange={handleInput} />
                     {/* <img src={search} alt='Search bar'/> */}
-                    <button className='bg-red-500 text-white px-5 h-12 py-3 w-36 rounded-r-full font-bold hover:bg-red-900' onClick={() => handleSearch(input)} >Search</button>
+                    <button className=' bg-red-500 text-white px-5 h-12 py-3 w-36 rounded-r-full font-bold hover:bg-red-900' onClick={() => handleSearch(input)} >Search</button>
 
                 </div>
             </nav>
 
             <div className="container mx-auto">
                 <div className="flex justify-center px-0">
+                    { result? <h2 className=' text-2xl  text-white mt-10 border-b-4 border-red-600 pb-3 mb-5 hover:border-b-white'>Search Results</h2> : null }
 
-                    <h2 className='text-2xl  text-white mt-10 border-b-4 border-red-600 pb-3 mb-5 hover:border-b-white'>Search Results</h2>
+                    
 
                 </div>
 
