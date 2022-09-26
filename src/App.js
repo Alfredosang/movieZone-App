@@ -46,7 +46,7 @@ const App = () => {
 
         </div>
 
-        <div className='card-box container px-28 grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6   mx-auto'>
+        <div className='card-box container px-16 grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6   mx-auto'>
           {
 
             popular.map((movie) => {
