@@ -36,7 +36,7 @@ const App = () => {
 
 
   return (
-    <div className="App  mt-20 mx-auto">
+    <div className="App mx-auto">
 
 
       <div className="container mx-auto">
@@ -46,7 +46,7 @@ const App = () => {
 
         </div>
 
-        <div className='card-box container grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6   mx-auto'>
+        <div className='card-box container px-28 grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6   mx-auto'>
           {
 
             popular.map((movie) => {
@@ -59,7 +59,7 @@ const App = () => {
                     {/* <a href="viewinfo" className="text-red-700 font-bold">View info</a> */}
                   </div>
                   <div className='absolute bg-red-600 opacity-80 rounded-full shadow px-5 top-0 m-3'>
-                    <span className='text-white fonts-bold'>{movie.release_date}</span>
+                    <span className='text-white fonts-bold'>{movie.release_date.slice(0,4)}</span>
                   </div>
 
                 </div>
