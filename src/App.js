@@ -42,7 +42,7 @@ const App = () => {
       <div className="container mx-auto">
         <div className="flex justify-center px-0">
 
-          <h2 className='text-2xl  text-white  border-b-4 border-red-600 pb-3 mb-5 hover:border-b-white'>Popular Movies</h2>
+          <h2 className='text-2xl  text-white  border-b-4 border-red-600 pb-3 mb-10 hover:border-b-white'>Popular Movies</h2>
 
         </div>
 

@@ -42,7 +42,7 @@ const Search = () => {
             
             <nav className='justify-center my-0 mx-auto '>
 
-                <h1 className='text-5xl  text-white flex justify-center mb-5' >Movie <span className='font-bold text-5xl text-red-600'>Zone</span></h1>
+                <h1 className='text-5xl  text-white flex justify-start ml-10 mb-5' >Movie <span className='font-bold text-5xl text-red-600'>Zone</span></h1>
                 <div className="input flex justify-center">
 
                     <input placeholder='Search Movie' type='text' name='searchBar' className='bg-gray-200 h-12 rounded-l-full flex justify-center w-3/5  p-3 text-md' onChange={handleInput} />

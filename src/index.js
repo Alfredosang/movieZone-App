@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Search from './Search'
+import SlideOne from './SlideOne';
 
 
 
@@ -11,6 +12,7 @@ root.render(
   <React.StrictMode>
     
     <Search />
+    <SlideOne />
     <App />
     
   </React.StrictMode>
