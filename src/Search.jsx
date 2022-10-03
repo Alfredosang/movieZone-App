@@ -38,16 +38,16 @@ const Search = () => {
 
 
     return (
-        <div className="App  mt-20 mx-auto " >
+        <div className="App  mt-24 mx-auto " >
             
-            <nav className='justify-center my-0 mx-auto '>
+            <nav className='justify-center my-5 mx-auto '>
 
-                <h1 className='text-5xl  text-white flex justify-start ml-10 mb-5' >Movie <span className='font-bold text-5xl text-red-600'>Zone</span></h1>
+                
                 <div className="input flex justify-center">
 
                     <input placeholder='Search Movie' type='text' name='searchBar' className='bg-gray-200 h-12 rounded-l-full flex justify-center w-3/5  p-3 text-md' onChange={handleInput} />
                     {/* <img src={search} alt='Search bar'/> */}
-                    <button className=' bg-red-500 text-white px-5 h-12 py-3 w-36 rounded-r-full font-bold hover:bg-red-900' onClick={() => handleSearch(input)} onSubmit={() => handleSearch(input)} >Search</button>
+                    <button className=' bg-red-500 text-white px-5 h-12 py-3 w-36 rounded-r-full font-bold hover:bg-white hover:text-black' onClick={() => handleSearch(input)} onSubmit={() => handleSearch(input)} >Search</button>
 
                 </div>
             </nav>
