@@ -3,6 +3,7 @@ import React from 'react'
 import Nav from './Nav';
 import Homepage from './pages/Homepage';
 import Signup from './pages/Signup';
+import Signin from './pages/Signin';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' exact element={<Homepage />} />
                     <Route path='/signup' element={<Signup />} />
+                    <Route path='/signin' element={<Signin />} />
                 </Routes>
             
 

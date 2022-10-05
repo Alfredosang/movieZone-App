@@ -1,4 +1,5 @@
 import React from 'react'
+import{Link} from 'react-router-dom'
 // import signuppic from  '../assets/signuppic.jpg'
 
 const Signup = () => {
@@ -12,8 +13,12 @@ const Signup = () => {
           <input type='email' placeholder='Email' autoComplete='email' className='py-4 px-2 m-5 rounded-md'></input>
           <input type='password' placeholder='Password' autoComplete='password' className='py-4 px-2 m-5 rounded-md'></input>
           <input type='password' placeholder='Confirm Password' autoComplete='password' className='py-4 px-2 m-5 rounded-md'></input>
-          <button className='bg-red-600 text-white py-5 m-5 rounded-md'>Submit</button>
+          <button className='bg-red-600 text-white py-5 m-5 rounded-md hover:bg-white hover:text-black font-bold'>Submit</button>
+
         </form>
+        <div className='text-white px-16'>
+          <Link to='/signin'><p className='text-white'>Do you have an account ? <span className='text-red-600 font-bold hover:text-white cursor-pointer'> Sign in here</span></p></Link>
+        </div>
 
       </div>
 

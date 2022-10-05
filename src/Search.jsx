@@ -65,8 +65,8 @@ const Search = () => {
 
                         output.map((movie) => {
                             return (
-                                <div key={movie.id} className="h-80 shadow bg-white rounded-xl mb-16 shadow-red-400 relative">
-                                    <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="movie poster" className="h-80 hover:scale-105 duration-200 w-full object-cover object-center rounded-xl overflow-hidden" />
+                                <div key={movie.id} className="h-80 shadow bg-white  mb-16 shadow-gray-300 relative">
+                                    <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="movie poster" className="h-80 hover:scale-105 duration-200 w-full object-cover object-center  overflow-hidden" />
 
                                     <div className="flex flex-col items-center my-2 absolute bottom-[-3] m-5 ">
                                         <h3 className="font-bold text-white text-md hover:text-red-500 justify-center">{movie.title}</h3>
