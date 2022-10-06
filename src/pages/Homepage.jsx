@@ -4,14 +4,17 @@ import SlideOne from '../SlideOne';
 import Popular from '../Popular';
 
 
-const Homepage = () => {
+const Homepage = ({popular}) => {
+
+
+    
     return (
         <div>
             
             <Search />
             <SlideOne />
-            <Popular />
-            <Popular />
+            <Popular popular={popular} />
+            <Popular popular={popular}  />
         </div>
     )
 }

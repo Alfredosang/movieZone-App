@@ -1,33 +1,35 @@
 
 import './App.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { useEffect, useState } from 'react';
-
-
-
-const App = () => {
-
-
-  const [popular, setPopular] = useState([]);
-
-  useEffect(() => {
-
-    popularMovies();
-
-  }, []);
-
-  const popularMovies = async () => {
-    const pageNum = Math.floor(Math.random() * 50) + 1;
-    const base = `https://api.themoviedb.org/3/movie/popular?api_key=17e5955c532c9dba692872d39ea34860&page=${pageNum}`;
-    const response = await fetch(base);
-    const data = await response.json();
+// import { useEffect, useState } from 'react';
 
 
 
-    setPopular(data.results.slice(0,18));
+const App = ({popular}) => {
+  
 
-  }
+
+  // const [popular, setPopular] = useState([]);
+
+  // useEffect(() => {
+
+  //   popularMovies();
+
+  // }, []);
+
+  // const popularMovies = async () => {
+  //   const pageNum = Math.floor(Math.random() * 50) + 1;
+  //   const base = `https://api.themoviedb.org/3/movie/popular?api_key=17e5955c532c9dba692872d39ea34860&page=${pageNum}`;
+  //   const response = await fetch(base);
+  //   const data = await response.json();
+
+
+
+  //   setPopular(data.results.slice(0,18));
+
+  // }
 
 
 
@@ -51,11 +53,11 @@ const App = () => {
 
             popular.map((movie) => {
               return (
-                <div key={movie.id} className="h-80 shadow shadow-gray-300 bg-white  mb-16  relative">
-                  <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="movie poster" className="h-80 hover:scale-105 duration-200 w-full object-cover object-center  overflow-hidden" />
+                <div key={movie.id} className="h-[400px]  bg-red-600 backdrop-blur-md  mb-16  relative">
+                  <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="movie poster" className="h-80 hover:scale-105 duration-200 w-full object-cover object-center  overflow-hidden " />
 
                   <div className="flex flex-col items-center my-2 absolute bottom-[-3] m-5 ">
-                    <h3 className="font-bold text-white text-md hover:text-red-500 justify-center">{movie.title}</h3>
+                    <Link to={`/details/${movie.id}`}><h3 className="font-bold text-white text-md hover:text-red-500 justify-center text-clip overflow-hidden ... ">{movie.title}</h3></Link>
                     {/* <a href="viewinfo" className="text-red-700 font-bold">View info</a> */}
                   </div>
                   <div className='absolute bg-red-600 opacity-80 rounded-full shadow px-5 top-0 m-3'>
