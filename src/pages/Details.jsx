@@ -3,8 +3,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const Details = ({ popular }) => {
-    const mov = popular;
-    console.log(mov);
+    // const mov = popular;
+    // console.log(mov);
     const { id } = useParams();
     return (
         <div className='bg-black flex justify-center items-center mt-[150px] p-10'>
