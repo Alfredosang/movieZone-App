@@ -10,12 +10,12 @@ const Details = ({ popular }) => {
         <div className='bg-black flex justify-center items-center mt-[150px] p-10'>
 
             {
-                // popular.filter((movie) => movie.id === id).map((movie,index) =>
-                popular.filter((movie) => {
-                    if (movie.id == id) {
-                        return movie
-                    }
-                }).map((movie) =>
+                popular.filter((movie) => movie.id == id).map((movie) =>
+                // popular.filter((movie) => {
+                //     if (movie.id == id) {
+                //         return movie
+                //     }
+                // }).map((movie) =>
 
                 (
                     <div className='bg-red-600 md:w-[1000px] md:h-[700px]  flex flex-col md:flex-row ' >

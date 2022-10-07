@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-        <div className='w-full px-10 md:px-24 m-10 flex justify-between absolute top-0 z-50 mx-auto'>
+        <div className='w-full px-10 pt-10 md:px-24 mb-10 flex justify-between fixed bg-black/70 top-0 z-50 mx-auto'>
             <div>
                 <Link to='/' className='text-white'><h1 className='text-4xl  text-white flex justify-start  mb-10' >Movie <span className='font-bold text-4xl text-red-600'>Zone</span></h1></Link>
             </div>

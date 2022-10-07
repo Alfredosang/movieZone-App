@@ -38,7 +38,7 @@ const Search = () => {
 
 
     return (
-        <div className="App  mt-24 mx-auto " >
+        <div className="App  mt-[200px] mx-auto " >
             
             <nav className='justify-center my-5 mx-auto '>
 
