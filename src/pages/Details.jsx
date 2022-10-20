@@ -1,4 +1,5 @@
 import React from 'react'
+// import ReactPlayer from 'react-player'
 // import signuppic from '../assets/signuppic.jpg'
 import { useParams } from 'react-router-dom'
 
@@ -6,16 +7,15 @@ const Details = ({ popular }) => {
     // const mov = popular;
     // console.log(mov);
     const { id } = useParams();
+    
+    
     return (
         <div className='bg-black flex justify-center items-center mt-[150px] p-10'>
+            {/* <ReactPlayer url='https://www.themoviedb.org/movie/859041/watch?locale=BO' /> */}
 
             {
-                popular.filter((movie) => movie.id == id).map((movie) =>
-                // popular.filter((movie) => {
-                //     if (movie.id == id) {
-                //         return movie
-                //     }
-                // }).map((movie) =>
+                popular.filter((movie) => movie.id === parseInt(id)).map((movie) =>
+                
 
                 (
                     <div className='bg-red-600 md:w-[1000px] md:h-[700px]  flex flex-col md:flex-row ' >
