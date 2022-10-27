@@ -18,16 +18,16 @@ const Details = ({ popular }) => {
                 
 
                 (
-                    <div className='bg-red-600 md:w-[1000px] md:h-[700px]  flex flex-col md:flex-row ' >
+                    <div className=' w-[350px] md:w-[1000px] md:h-[700px]  flex flex-col md:flex-row justify-center' >
 
                         
                             <div key={movie.id}>
-                                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt='more details' className='w-[500px] h-[700px] object-cover object-top' />
+                                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt='more details' className='w-[350px] h-[350px] md:w-[500px] md:h-[700px] object-cover object-top' />
 
                             </div>
 
 
-                            <div className='p-10 space-y-5 ml-10 w-[400px]'>
+                            <div className='p-10 space-y-5 md:ml-10 w-[400px]'>
                                 <h2 className='text-white font-bold text-2xl '>{movie.title}</h2>
                                 <p className=' text-white '>{movie.overview}</p>
 

@@ -43,22 +43,23 @@ const App = ({popular}) => {
 
 
       <div className="container mx-auto">
-        <div className="flex justify-center px-0">
+        <div className="flex justify-center  px-0">
 
-          <h2 className='text-2xl  text-white  border-b-4 border-red-600 pb-3 mb-10 hover:border-b-white'>Popular Movies</h2>
+          <h2 className='text-2xl  text-white px-7 rounded-full border-4 border-red-600 pb-3 mb-10 hover:border-b-white'>Popular Movies</h2>
 
         </div>
 
         <div className='card-box container px-16 grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6   mx-auto'>
           {
               
-            popular.map((movie) => { console.log(movie,typeof(movie.id)) 
+            popular.map((movie) => { 
               return (
+                <Link to={`/details/${movie.id}`}>
                 <div key={movie.id} className="h-[400px]  bg-red-600 backdrop-blur-md  mb-16  relative">
                   <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="movie poster" className="h-80 hover:scale-105 duration-200 w-full object-cover object-center  overflow-hidden " />
 
                   <div className="flex flex-col items-center my-2 absolute bottom-[-3] m-5 ">
-                    <Link to={`/details/${movie.id}`}><h3 className="font-bold text-white text-md hover:text-red-500 justify-center text-clip overflow-hidden ... ">{movie.title}</h3></Link>
+                    <h3 className="font-bold text-white text-md hover:text-red-500 justify-center text-clip overflow-hidden ... ">{movie.title}</h3>
                     {/* <a href="viewinfo" className="text-red-700 font-bold">View info</a> */}
                   </div>
                   <div className='absolute bg-red-600 opacity-80 rounded-full shadow px-5 top-0 m-3'>
@@ -66,6 +67,7 @@ const App = ({popular}) => {
                   </div>
 
                 </div>
+                </Link>
 
                  
 
